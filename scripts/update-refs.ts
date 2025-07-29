@@ -42,5 +42,6 @@ try {
     }),
   );
 } catch (error) {
-  console.error('❌ An error occurred:', error.message);
+  const errorMessage = error instanceof Error ? error.message : String(error);
+  console.error('❌ An error occurred:', errorMessage);
 }
