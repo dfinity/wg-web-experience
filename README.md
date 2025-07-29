@@ -13,11 +13,9 @@ Our mission is to make [ICP](https://internetcomputer.org/) development accessib
 ## Guiding Principles
 
 1. Follow the principles, goals, and processes outlined in [ICRC-0: Internet Computer Working Group Operation and Governance](https://github.com/dfinity/ICRC). While the original ICRC document provides extensive details, this working group emphasizes the following key principles:
-
    - **Rough Consensus**: Strive for broad consensus among stakeholders, ensuring that any remaining objections are discussed and clearly justified.
 
    - **Composition**: The working group is open to anyone interested in participating, but will be split between a core group of active contributors and a larger group of passive participants.
-
      - **Core Team**: Actively contribute and vote on proposals.
      - **Chair(s)**: Drive the working group, schedule meetings, and determine consensus.
      - **Passive Participants**: Join discussions but do not vote.
