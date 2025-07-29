@@ -37,3 +37,24 @@ The Web Experience Working Group follows structured processes to ensure effectiv
 
 - Members can propose sub groups to tackle specific challenges or topics by defining clear goals, scope, and expected outcomes.
 - Sub groups are temporary and will conclude once their objectives are met or as decided by the chairs.
+
+## Local Development
+
+### Initial Setup
+
+To set up your local development environment:
+
+1. Fork the repository on GitHub.
+2. Clone your fork to your local machine.
+3. Install `pnpm` via corepack:
+   ```shell
+   corepack enable
+   ```
+4. Install the necessary dependencies using `pnpm`.
+   ```shell
+   pnpm i
+   ```
+
+### Reference Documentation
+
+In the `refs` directory of the repository, you will find some reference materials that have been mirrored in this repository for easy access by local AI agents. These files can be referenced in prompts to provide up to additional context when necessary.
