@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the Web Experience Working Group! We are dedicated to enhancing the web development experience within the Internet Computer Protocol (ICP) ecosystem.
+Welcome to the Web Experience Working Group! We are dedicated to enhancing the Web Development Experience (in short, Web Experience) within the Internet Computer Protocol (ICP) ecosystem.
 
 If you're new to the Internet Computer Protocol (ICP) ecosystem, we recommend starting with the [ICP Documentation](https://internetcomputer.org/docs) to familiarize yourself with key concepts and terminology.
 
