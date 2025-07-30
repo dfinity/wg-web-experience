@@ -1,0 +1,43 @@
+volumes:
+  wg-webexp-ollama:
+  wg-webexp-qdrant:
+
+networks:
+  wg-webexp-network:
+    driver: bridge
+
+services:
+  wg-webexp-dev:
+    image: mcr.microsoft.com/devcontainers/base:ubuntu
+    container_name: wg-webexp-dev
+    volumes:
+      - ../../:/workspaces:cached
+    command: sleep infinity
+    depends_on:
+      - wg-webexp-ollama
+      - wg-webexp-qdrant
+    networks:
+      - wg-webexp-network
+
+  wg-webexp-ollama:
+    image: ollama/ollama:latest
+    container_name: wg-webexp-ollama
+    ports:
+      - 11434:11434
+    volumes:
+      - wg-webexp-ollama:/root/.ollama
+    networks:
+      - wg-webexp-network
+
+  wg-webexp-qdrant:
+    image: qdrant/qdrant:latest
+    container_name: wg-webexp-qdrant
+    ports:
+      - 6333:6333
+      - 6334:6334
+    volumes:
+      - wg-webexp-qdrant:/qdrant/storage
+    networks:
+      - wg-webexp-network
+    environment:
+      - QDRANT__SERVICE__API_KEY=mysecretpassword

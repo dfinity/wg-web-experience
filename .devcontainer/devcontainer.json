@@ -1,0 +1,24 @@
+{
+  "name": "wg-webexp-devcontainer",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "wg-webexp-dev",
+  "workspaceFolder": "/workspaces/wg-web-experience",
+  "forwardPorts": [11434, 6333, 6334],
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "EditorConfig.EditorConfig",
+        "esbenp.prettier-vscode",
+        "RooVeterinaryInc.roo-cline",
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
+      ],
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
+    }
+  }
+}
