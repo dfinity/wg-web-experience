@@ -4,70 +4,89 @@
 
 ### HTTP Message Signatures
 
-The HTTP Message Signature specification ([RFC 9421](https://datatracker.ietf.org/doc/html/rfc9421)) provides a mechanism to cryptographically sign HTTP requests or responses. This allows for the verification of the integrity and authenticity of the message, protecting against tampering and providing non-repudiation.
+The HTTP Message Signature specification ([RFC 9421](https://datatracker.ietf.org/doc/html/rfc9421)) defines a mechanism for creating, encoding, and verifying digital signatures or message authentication codes (MACs) over components of an HTTP message. This ensures the integrity and authenticity of HTTP requests and responses, even when messages are transformed by intermediaries or partially unknown to the signer.
 
-Key features of HTTP Message Signatures:
+#### Key Features:
 
-- Supports signing of both requests and responses.
-- Can be used with any HTTP method.
-- Uses a variety of cryptographic algorithms, including HMAC, ECDSA, and Ed25519.
-- Provides a flexible framework for defining signature policies.
-- Can be used to secure both public and private APIs.
+- Supports signing of both requests and responses across any HTTP method.
+- Employs a variety of cryptographic algorithms, including HMAC, ECDSA, and Ed25519.
+- Provides a flexible framework for defining signature policies tailored to application needs.
+- Enables secure communication for both public and private APIs.
 
-HMS has several benefits, including:
+#### Benefits:
 
-- Increased security: Protect against attacks such as man-in-the-middle attacks and replay attacks.
-- Improved reliability: Ensure that messages are not corrupted in transit.
-- Enhanced non-repudiation: Prove that a message was sent or received by a particular party.
+- **Enhanced Security:** Protects against tampering, man-in-the-middle attacks, and replay attacks.
+- **Reliability:** Ensures messages remain unaltered during transit.
+- **Non-Repudiation:** Verifies that a message was sent or received by a specific party.
 
-HMS is a valuable tool for securing HTTP communications. It is relatively easy to implement and can be used to significantly improve the security of web applications and APIs.
+Additionally, the specification introduces mechanisms for negotiating the use of signatures in ongoing HTTP exchanges, making it a versatile tool for securing HTTP communications. By focusing on application-relevant components and adhering to strict canonicalization rules, HTTP Message Signatures simplify implementation while maintaining robust security guarantees.
 
 ### JSON Web Key
 
-The JSON Web Key (JWK) specification ([RFC 7517](https://datatracker.ietf.org/doc/html/rfc7517)) defines a common way to represent cryptographic keys in JSON format. This allows keys to be easily transferred between different systems and applications.
+The JSON Web Key (JWK) specification ([RFC 7517](https://datatracker.ietf.org/doc/html/rfc7517)) defines a standardized JSON-based format for representing cryptographic keys. This format facilitates the secure exchange of keys between systems and applications.
 
-JWKs can represent both symmetric and asymmetric keys, and they can be used for a variety of purposes, such as signing and encrypting data, and authenticating users.
+JWKs can represent both symmetric and asymmetric keys and are commonly used for signing, encryption, and authentication purposes. The specification supports a wide range of key types and algorithms, ensuring flexibility and extensibility.
 
-The JWK specification defines a number of different key types, each of which has its own set of required and optional parameters. This allows for a wide range of keys to be represented in a consistent way.
+#### Key Features:
 
-JWKs are typically used in conjunction with other protocols, such as JSON Web Signature (JWS) and JSON Web Encryption (JWE). These protocols use JWKs to securely transmit data between different systems and applications.
+- **Standardized Format:** JWKs use a consistent JSON structure, making them easy to parse and process.
+- **Flexibility:** Supports various key types and cryptographic algorithms.
+- **Extensibility:** Allows for the addition of new key types and parameters as needed.
+- **Interoperability:** Designed for use with protocols like JSON Web Signature (JWS) and JSON Web Encryption (JWE).
 
-Here are some of the key features of the JWK specification:
-
-- **Standardized format:** JWKs are represented in a standardized JSON format, which makes them easy to parse and process.
-- **Flexible:** JWKs can represent a wide range of key types and algorithms.
-- **Extensible:** The JWK specification allows for new key types and algorithms to be added in the future.
-- **Secure:** JWKs can be used to securely transmit data between different systems and applications.
-
-The JWK specification is a valuable tool for developers who need to securely exchange cryptographic keys. It is a well-designed and flexible specification that is widely used in a variety of applications.
+JWKs are essential for developers needing a secure and interoperable method to exchange cryptographic keys. Their design emphasizes simplicity, security, and compatibility with existing standards.
 
 ### Base64URL Encoding
 
-Base64URL ([RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648)) encoding is a variant of Base64 encoding that is designed for use in URLs and other web-safe contexts. It is similar to standard Base64 encoding, but it replaces the following characters:
+Base64URL encoding, as defined in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648), is a URL-safe variant of Base64 encoding. It modifies the standard Base64 alphabet by replacing:
 
 - `'+'` with `'-'`
 - `'/'` with `'_'`
-- `'='` (padding character) with `''`
+- Omitting the padding character `'='` when not required.
 
-This makes it possible to use Base64URL-encoded data in URLs without having to worry about the characters being interpreted as special characters by the web browser.
+This ensures compatibility with URLs and filenames, where certain characters have special meanings.
 
-Base64URL encoding is often used to encode binary data, such as images or videos, for transmission over the web. It is also used in some cryptographic applications, such as JSON Web Tokens (JWTs).
+#### Key Features:
 
-Base64URL encoding is a simple and efficient way to encode binary data for transmission over the web. It is supported by all major web browsers and programming languages.
+- **Web-Safe:** Avoids characters that may be misinterpreted in URLs or file paths.
+- **Efficient Encoding:** Encodes binary data, such as cryptographic keys or tokens, in a compact and readable format.
+- **Padding Behavior:** Padding (`=`) is optional and often omitted when the data length is known, reducing overhead.
+
+#### Common Use Cases:
+
+- Encoding JSON Web Tokens (JWTs).
+- Transmitting binary data in web applications.
+- Ensuring safe data representation in query strings and headers.
+
+By adhering to the guidelines in RFC 4648, Base64URL encoding provides a robust and interoperable method for encoding data in web-safe contexts.
 
 ### Forbidden Headers
 
-[Forbidden headers](https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name) (ref: [Fetch](https://fetch.spec.whatwg.org/)) are HTTP headers that are not allowed to be set or modified by web browsers. These headers are typically reserved for use by the browser itself or by web servers, and attempting to set them can result in errors or security vulnerabilities.
+[Forbidden headers](https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name) are HTTP headers that web browsers restrict from being set or modified via JavaScript. These restrictions, defined in the [Fetch specification](https://fetch.spec.whatwg.org/), ensure the security and proper functioning of browser-server communication.
 
-Some common forbidden headers include:
+#### Common Forbidden Headers:
 
-- `Connection`
-- `Content-Length`
-- `Date`
-- `Host`
-- `Transfer-Encoding`
+- `Connection`: Managed by the browser to control connection persistence.
+- `Content-Length`: Automatically calculated by the browser based on the request body.
+- `Date`: Set by the server to indicate the time of message generation.
+- `Host`: Specifies the domain of the server; handled internally by the browser.
+- `Transfer-Encoding`: Used for chunked data transfer, which is managed by the browser.
 
-Trying to set these headers in JavaScript code may result in an error, or the header may be ignored by the browser. It is important to avoid setting forbidden headers, as this can interfere with the proper functioning of the browser and web server and potentially open up security holes.
+#### Why Are These Headers Restricted?
+
+Forbidden headers are reserved for browser or server use to:
+
+- Prevent security vulnerabilities, such as header injection attacks.
+- Ensure compatibility with HTTP standards and intermediaries.
+- Avoid conflicts with browser-managed behaviors.
+
+#### Developer Guidance:
+
+- **Avoid Manual Overrides**: Let the browser handle these headers to maintain security and compliance.
+- **Use Alternative Headers**: For custom metadata, use headers like `X-Custom-Header` or `Authorization`.
+- **Understand Browser Behavior**: Refer to the [Fetch specification](https://fetch.spec.whatwg.org/) for detailed rules on header management.
+
+By adhering to these guidelines, developers can ensure secure and reliable HTTP communication.
 
 ## Related Work
 

@@ -24,8 +24,20 @@ const urls = [
   },
   {
     url: 'https://www.rfc-editor.org/rfc/rfc9421.txt',
-    fileName: 'rfc9421.txt',
-  }
+    fileName: 'rfc9421-http-message-signatures.txt',
+  },
+  {
+    url: 'https://www.rfc-editor.org/rfc/rfc7517.txt',
+    fileName: 'rfc7517-json-web-key.txt',
+  },
+  {
+    url: 'https://www.rfc-editor.org/rfc/rfc4648.txt',
+    fileName: 'rfc4648-base64url.txt',
+  },
+  {
+    url: 'https://raw.githubusercontent.com/whatwg/fetch/refs/heads/main/fetch.bs',
+    fileName: 'fetch.bs',
+  },
 ];
 
 try {
