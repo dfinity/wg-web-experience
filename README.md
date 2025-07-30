@@ -23,7 +23,7 @@ Our mission is to make [ICP](https://internetcomputer.org/) development accessib
      - **Passive Participants**: Join discussions but do not vote.
      - **Sub Groups**: Sub groups may form to address specific topics and will dissolve upon achieving their objectives.
 
-2. Leverage one of the IC's key advantages: as a full-stack developer, you can deploy without worrying about infrastructure management. This working group should prioritize delivering a seamless Web Experience while minimizing infrastructure management efforts.
+2. Leverage one of the ICP's key advantages: as a full-stack developer, you can deploy without worrying about infrastructure management. This working group should prioritize delivering a seamless Web Experience while minimizing infrastructure management efforts.
 
 ## Composition
 
