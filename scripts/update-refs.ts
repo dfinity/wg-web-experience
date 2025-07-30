@@ -22,6 +22,10 @@ const urls = [
       "https://raw.githubusercontent.com/dfinity/internet-identity/refs/heads/main/docs/ii-spec.mdx",
     fileName: "ii-spec.mdx",
   },
+  {
+    url: 'https://www.rfc-editor.org/rfc/rfc9421.txt',
+    fileName: 'rfc9421.txt',
+  }
 ];
 
 try {
