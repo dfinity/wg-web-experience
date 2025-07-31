@@ -57,4 +57,4 @@ To set up your local development environment:
 
 ### Reference Documentation
 
-In the `refs` directory of the repository, you will find some reference materials that have been mirrored in this repository for easy access by local AI agents. These files can be referenced in prompts to provide up to additional context when necessary.
+In the `refs` directory of the repository, you will find some reference materials that have been mirrored in this repository for easy access by local AI agents. These files can be referenced in prompts to provide additional context when necessary.
