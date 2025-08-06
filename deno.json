@@ -1,0 +1,11 @@
+{
+  "tasks": {
+    "update-refs": "deno run --no-prompt --allow-write=\"./refs\" --allow-net=\"raw.githubusercontent.com:443\" scripts/update-refs.ts"
+  },
+  "fmt": {
+    "exclude": ["refs/"]
+  },
+  "imports": {
+    "@std/path": "jsr:@std/path@^1.0.19"
+  }
+}
