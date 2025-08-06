@@ -107,9 +107,6 @@ summary of what you need to do:
 ### Install dependencies
 
 1. Install [Deno](https://docs.deno.com/runtime/#quick-install).
-   ```bash
-   curl -fsSL "https://deno.land/install.sh" | sh
-   ```
 2. Install Deno dependencies:
    ```bash
    deno i

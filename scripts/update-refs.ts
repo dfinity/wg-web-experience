@@ -8,15 +8,18 @@ const REFS_DIR = path.join(ROOT_DIR, "refs");
 
 const urls = [
   {
-    url: "https://raw.githubusercontent.com/dfinity/portal/refs/heads/master/docs/references/http-gateway-protocol-spec.md",
+    url:
+      "https://raw.githubusercontent.com/dfinity/portal/refs/heads/master/docs/references/http-gateway-protocol-spec.md",
     fileName: "http-gateway-protocol-spec.md",
   },
   {
-    url: "https://raw.githubusercontent.com/dfinity/portal/refs/heads/master/docs/references/ic-interface-spec.md",
+    url:
+      "https://raw.githubusercontent.com/dfinity/portal/refs/heads/master/docs/references/ic-interface-spec.md",
     fileName: "ic-interface-spec.md",
   },
   {
-    url: "https://raw.githubusercontent.com/dfinity/internet-identity/refs/heads/main/docs/ii-spec.mdx",
+    url:
+      "https://raw.githubusercontent.com/dfinity/internet-identity/refs/heads/main/docs/ii-spec.mdx",
     fileName: "ii-spec.mdx",
   },
 ];
@@ -29,7 +32,7 @@ try {
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error(
-          `Failed to fetch URL ${url}: ${response.status} ${response.statusText}`
+          `Failed to fetch URL ${url}: ${response.status} ${response.statusText}`,
         );
       }
       if (!response.body) {
@@ -39,7 +42,7 @@ try {
       const filePath = path.join(REFS_DIR, fileName);
       await pipeline(response.body, createWriteStream(filePath));
       console.log(`✅ File downloaded successfully to ${filePath}`);
-    })
+    }),
   );
 } catch (error) {
   const errorMessage = error instanceof Error ? error.message : String(error);
