@@ -1,0 +1,18 @@
+name: Generate Changelog
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: main-${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  generate_changelog:
+    uses: dfinity/ci-tools/.github/workflows/generate-changelog.yaml@main
+    with:
+      token_app_id: ${{ vars.PR_AUTOMATION_BOT_PUBLIC_APP_ID }}
+    secrets:
+      token_private_key: ${{ secrets.PR_AUTOMATION_BOT_PUBLIC_PRIVATE_KEY }}
