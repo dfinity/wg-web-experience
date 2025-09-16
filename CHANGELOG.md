@@ -2,6 +2,7 @@
 
 ### Feat
 
+- add HTTP Authentication issue (#4)
 - add local mirrors of important reference specs (#2)
 
 ### Fix
