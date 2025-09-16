@@ -20,19 +20,11 @@ decentralized web technologies.
 
 The Web Experience Working Group focuses on projects that enhance the developer
 and user experience of accessing the Internet Computer through web-based
-platforms.
+platforms. This covers many layers of ICP development, from clients through to
+canisters.
 
-| Status     | Description                                        |
-| ---------- | -------------------------------------------------- |
-| IDEA       | Ongoing idea in meetings, on the forum or Discord. |
-| ISSUE      | Topic is under discussion in either issue or PR.   |
-| DRAFT      | Draft of the final standard, subject to change.    |
-| APPROVED   | Approved standard within the working group.        |
-| STANDARD   | Official NNS approved ICRC Standard.               |
-| ON HOLD    | Waiting to be picked up again once prioritized.    |
-| UNKNOWN    | Hasn't progressed and/or had updates for a while.  |
-| ABANDONED  | Abandoned and is no longer actively pursued.       |
-| SUPERSEDED | Another standard has replaced this standard.       |
+See the appendix on [Project Status](#project-status) for definitions of the
+various project statuses.
 
 ### Clients
 
@@ -96,3 +88,19 @@ This project is licensed under the [Apache-2.0 License](LICENSE). We welcome
 contributions from developers, designers, and enthusiasts of all skill levels!
 Check out the [Contributing guide](./.github/CONTRIBUTING.md) to learn how you
 can get involved.
+
+## Appendices
+
+### Project Status
+
+| Status     | Description                                        |
+| ---------- | -------------------------------------------------- |
+| IDEA       | Ongoing idea in meetings, on the forum or Discord. |
+| ISSUE      | Topic is under discussion in either issue or PR.   |
+| DRAFT      | Draft of the final standard, subject to change.    |
+| APPROVED   | Approved standard within the working group.        |
+| STANDARD   | Official NNS approved ICRC Standard.               |
+| ON HOLD    | Waiting to be picked up again once prioritized.    |
+| UNKNOWN    | Hasn't progressed and/or had updates for a while.  |
+| ABANDONED  | Abandoned and is no longer actively pursued.       |
+| SUPERSEDED | Another standard has replaced this standard.       |
