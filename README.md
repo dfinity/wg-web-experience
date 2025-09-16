@@ -84,10 +84,7 @@ know to contribute to this project.
 
 ## License
 
-This project is licensed under the [Apache-2.0 License](LICENSE). We welcome
-contributions from developers, designers, and enthusiasts of all skill levels!
-Check out the [Contributing guide](./.github/CONTRIBUTING.md) to learn how you
-can get involved.
+This project is licensed under the [Apache-2.0 License](LICENSE).
 
 ## Appendices
 
